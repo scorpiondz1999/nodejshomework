@@ -50,4 +50,4 @@ MIT
 For any questions, please contact me with the information below:
 * GitHub: [@dfgd](https://github.com/dfgd)
 
-* Email: gdg
+* Email: enzonpapa@gmail.com
