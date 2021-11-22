@@ -15,39 +15,39 @@ Table of Contents
 
 * [Questions](#questions)
 
-# zerzer
+# dfg
 
-![License BSD](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)(https://opensource.org/licenses/BSD-3-Clause)
+![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)
 
 ---
 
 ## Description
 *The what, why, and how:*
-ezrrze
+dfg
 
 * [License](#license)
 
 ## Installation
 *Steps required to install project and how to get the development environment running:*
-ezrez
+dfg
 
 ## Usage
 *Instructions and examples for use:*
-ezrez
+dfg
 
 ## Contributing
 *If you would like to contribute it, you can follow these guidelines for how to do so.*
-ezrzer
+dfg
 
 ## Tests
 *Tests for application and how to run them:*
 undefined
 
 ## License
-BSD 3.0
+MIT
 
 ## Questions
 For any questions, please contact me with the information below:
-* GitHub: [@rezer](https://github.com/rezer)
+* GitHub: [@dfgd](https://github.com/dfgd)
 
-* Email: ezrzr
+* Email: gdg

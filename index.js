@@ -47,7 +47,7 @@ const questions = [ {
     
     {
         type: 'input',
-        message: "Write a description of your project.",
+        message: "Short description of your project.",
         name: 'description',
         
         next_question: function (answer) {
@@ -60,12 +60,25 @@ const questions = [ {
     },
     {
         type: 'input',
-        message: "command should to be run to install depedencies?",
+        message: "what command should to be run to install depedencies?",
         name: 'installation',
         
         next_question: function (answer) {
             if (answer.length === 0) {
                 console.log("A valid command is required !");
+                return false;
+            }
+            return true;
+        }
+    },
+    {
+        type: 'input',
+        message: "What command should be run to run tests?",
+        name: 'usage',
+        
+        next_question: function (answer) {
+            if (answer.length === 0) {
+                console.log("A valid answer is required !");
                 return false;
             }
             return true;
