@@ -48,6 +48,6 @@ MIT
 
 ## Questions
 For any questions, please contact me with the information below:
-* GitHub: [@dfgd](https://github.com/dfgd)
+* GitHub: [github.com/scorpiondz1999](https://github.com/dfgd)
 
 * Email: enzonpapa@gmail.com
