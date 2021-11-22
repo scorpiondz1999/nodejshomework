@@ -6,3 +6,4 @@ A node.js application that uses user input from inquirer to populate a README.md
 
 https://github.com/scorpiondz1999/nodejshomework/issues/1#issue-1059589468
 https://github.com/scorpiondz1999/nodejshomework/issues/1#issue-1059589468
+https://user-images.githubusercontent.com/84550325/142790845-bbbdbeb3-13c8-447b-8c44-c88347ebbff9.mp4
