@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+
+const generateMD = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [ {
@@ -20,7 +21,7 @@ const questions = [ {
     {
         type: 'input',
         message: "What is the name email Address?",
-        name: 'repo',
+        name: 'email',
         
         next_question: function (answer) {
             if (answer.length === 0) {
@@ -60,7 +61,7 @@ const questions = [ {
     {
         type: 'input',
         message: "command should to be run to install depedencies?",
-        name: 'repo',
+        name: 'installation',
         
         next_question: function (answer) {
             if (answer.length === 0) {
@@ -73,7 +74,7 @@ const questions = [ {
     {
         type: 'input',
         message: "What does the user need to know about using the repo?",
-        name: 'repo',
+        name: 'usage',
         
         next_question: function (answer) {
             if (answer.length === 0) {
@@ -86,7 +87,7 @@ const questions = [ {
     {
         type: 'input',
         message: "what does the user need to know about constributing to the repo?",
-        name: 'repo',
+        name: 'contrib',
         
         next_question: function (answer) {
             if (answer.length === 0) {
@@ -95,31 +96,11 @@ const questions = [ {
             }
             return true;
         }
-    },
-    {
-        type: 'input',
-        message: "If applicable, describe the steps required to install your project for the Installation section.",
-        name: 'installation'
-    },
-    {
-        type: 'input',
-        message: "Provide instructions and examples of your project in use for the Usage section.",
-        name: 'usage'
-    },
-    {
-        type: 'input',
-        message: "If applicable, provide guidelines on how other developers can contribute to your project.",
-        name: 'contributing'
-    },
-    {
-        type: 'input',
-        message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
-        name: 'tests'
-    },
+    },    
     {
         type: 'list',
         message: "Choose a license for the project.",
-        choices: ['MIT', 'Apache 2.0', 'GPL'],
+        choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3.0', 'None'],
         name: 'license'
     }
 ];
@@ -136,11 +117,12 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() 
+async function init() 
    {const responses = await inquirer.prompt(questions);
         
         console.log("Generating your README")
-        const markdown = generateMarkdown(responses);
+        const markdown = generateMD(responses);
+        console.log(responses)
     
         // Write markdown to file
         writeToFile('DjREADME.md', markdown);
